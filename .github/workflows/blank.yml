@@ -36,5 +36,5 @@ jobs:
 
       # Build the SRPM package
       - name: Build the source RPM
-        run: cd rpm/SPECS && make rpmbuild -bs *.spec
+        run: cd rpm/SPECS && rpmbuild -bs *.spec
 
