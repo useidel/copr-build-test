@@ -1,13 +1,16 @@
-#!/usr/bin/bash
+#!/usr/bin/bash -x
 
 PATH=/usr/bin:/usr/sbin/
 export PATH
 
-cp *.spec $HOME/rpm/SPECS/
+pwd
+ls -al
+
+cp *.spec rpm/SPECS/
 
 MYVER=`grep ^Version *.spec |awk '{print $2}'`
 
-cd $HOME/rpm/SOURCES
+cd rpm/SOURCES
 
 wget -nd https://github.com/signalapp/Signal-Desktop/archive/refs/tags/v${MYVER}.tar.gz
 
