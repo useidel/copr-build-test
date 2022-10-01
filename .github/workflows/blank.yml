@@ -48,4 +48,4 @@ jobs:
 
       # Submit COPR build
       - name: Submit the copr build
-        run: copr-cli build testi /github/home/rpmbuild/SRPMS/*.src.rpm
+        run: copr-cli build test /github/home/rpmbuild/SRPMS/*.src.rpm
