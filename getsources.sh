@@ -3,14 +3,13 @@
 PATH=/usr/bin:/usr/sbin/
 export PATH
 
-mkdir -p rpm/SPECS rpm/SOURCES rpm/SRPMS
-
-cp *.spec rpm/SPECS/
-cp *.patch rpm/SOURCES
+rpmdev-setuptree
 
 MYVER=`grep ^Version *.spec |awk '{print $2}'`
 
-cd rpm/SOURCES
+cp *.patch rpmbuild/SOURCES
+
+cd rpmbuild/SOURCES
 
 wget -nd https://github.com/signalapp/Signal-Desktop/archive/refs/tags/v${MYVER}.tar.gz
 
