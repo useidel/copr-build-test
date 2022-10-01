@@ -6,13 +6,10 @@ export PATH
 rpmdev-setuptree
 
 MYVER=`grep ^Version *.spec |awk '{print $2}'`
-MYHOME=`pwd`
 
-echo "%_topdir	$MYHOME" > .rpmmacros
+cp *.patch /github/home/rpmbuild/SOURCES
 
-cp *.patch rpmbuild/SOURCES
-
-cd rpmbuild/SOURCES
+cd /github/home/rpmbuild/SOURCES
 
 wget -nd https://github.com/signalapp/Signal-Desktop/archive/refs/tags/v${MYVER}.tar.gz
 
