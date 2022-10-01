@@ -36,5 +36,7 @@ jobs:
 
       # Build the SRPM package
       - name: Build the source RPM
-        run: rpmbuild -bs *.spec
+        run: |
+             env
+             rpmbuild -bs *.spec
 

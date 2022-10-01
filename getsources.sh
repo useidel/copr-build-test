@@ -6,6 +6,9 @@ export PATH
 rpmdev-setuptree
 
 MYVER=`grep ^Version *.spec |awk '{print $2}'`
+MYHOME=`pwd`
+
+echo "%_topdir	$MYHOME" > .rpmmacros
 
 cp *.patch rpmbuild/SOURCES
 
