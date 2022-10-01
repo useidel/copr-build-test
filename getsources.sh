@@ -6,6 +6,7 @@ export PATH
 mkdir -p rpm/SPECS rpm/SOURCES rpm/SRPMS
 
 cp *.spec rpm/SPECS/
+cp *.patch rpm/SOURCES
 
 MYVER=`grep ^Version *.spec |awk '{print $2}'`
 
