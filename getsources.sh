@@ -3,8 +3,7 @@
 PATH=/usr/bin:/usr/sbin/
 export PATH
 
-pwd
-ls -al
+mkdir -p rpm/SPECS rpm/SOURCES rpm/SRPMS
 
 cp *.spec rpm/SPECS/
 
