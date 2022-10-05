@@ -8,6 +8,8 @@ Group: Development/Tools
 Source: %{name}.tar.gz
 BuildRequires: coreutils
 
+%global debug_package %{nil}
+
 %description
 %{summary}
 
@@ -25,10 +27,6 @@ cp hello_world "%{buildroot}/opt/dummy_package/"
 /opt/dummy_package/hello_world
 
 %clean
-%if "%{clean}" != ""
-  rm -rf %{_topdir}/BUILD/%{name}
-  [ %{buildroot} == "%{name}-%{version}-%{release}.%{_target_cpu}" ] && rm -rf %{buildroot}
-%endif
 
 %post
 chmod 755 -R /opt/dummy_package
