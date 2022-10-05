@@ -17,7 +17,6 @@ MYVER=`grep ^Version *.spec |awk '{print $2}'`
 
 # Now download the sources to the correspoding RPMBUILD directory
 cd /github/home/rpmbuild/SOURCES
-wget -nd https://github.com/Genymobile/scrcpy/archive/refs/tags/v${MYVER}.tar.gz -O scrcpy-${MYVER}.tar.gz
-wget -nd https://github.com/Genymobile/scrcpy/releases/download/v${MYVER}/scrcpy-server-v${MYVER}
+wget -nd https://github.com/useidel/copr-build-test/blob/main/dummy_package.tar.gz
 
 
