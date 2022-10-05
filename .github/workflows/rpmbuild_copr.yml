@@ -1,6 +1,7 @@
-# This is a basic workflow to help you get started with Actions
+# This is workflow to build rpms using the SPEC file
+# The Copr build service is used
 
-name: Example-Test
+name: rpmbuild_copr
 
 # Controls when the workflow will run
 on:
@@ -18,12 +19,14 @@ jobs:
   # This workflow contains a single job called "build"
   build:
     # The type of runner that the job will run on
+    # Looks there are no or not many native fedora-runners, hence we use a container
     container: fedora:latest
     runs-on: ubuntu-latest
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      # That workspace (the directory) is different from the RPMBUILD space
       - uses: actions/checkout@v3
 
       # Install rpm and copr tools
@@ -39,6 +42,8 @@ jobs:
         run: rpmbuild -bs *.spec
 
       # setup COPR Authentication
+      # You need to store your Copr authenication data under
+      # Settings -> Actions -> Repository secrets
       - name: Install API token for copr-cli
         env:
           API_TOKEN_CONTENT: ${{ secrets.COPR_API_TOKEN }}
@@ -47,5 +52,6 @@ jobs:
            echo "$API_TOKEN_CONTENT" > "$HOME/.config/copr"
 
       # Submit COPR build
+      # The path is not the $GITHUB_WORKSPACE it is the RPMBUILD space
       - name: Submit the copr build
-        run: copr-cli build test /github/home/rpmbuild/SRPMS/*.src.rpm
+        run: copr-cli build --nowait test /github/home/rpmbuild/SRPMS/*.src.rpm
