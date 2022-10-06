@@ -5,7 +5,8 @@ Release: 1%{?dist}
 License: GPL
 Packager: Udo Seidel
 Group: Development/Tools
-Source: https://secure.eicar.org/eicar.com
+Source: %{name}.src.tar.gz
+BuildRequires: coreutils, make, gcc
 
 %global debug_package %{nil}
 
@@ -15,15 +16,14 @@ Source: https://secure.eicar.org/eicar.com
 %prep
 %setup -n dummy_package
 
-%build
-
+make hello_world
 
 %install
 mkdir -p "%{buildroot}/opt/dummy_package"
-cp eicar.com "%{buildroot}/opt/dummy_package/"
+cp hello_world "%{buildroot}/opt/dummy_package/"
 
 %files
-/opt/dummy_package/eicar.com
+/opt/dummy_package/hello_world
 
 %clean
 
