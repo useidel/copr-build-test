@@ -1,6 +1,6 @@
 Summary: This package is a sample for quickly build dummy RPM package.
 Name: dummy_package
-Version: 0.0.2
+Version: 0.0.1
 Release: 1%{?dist}
 License: GPL
 Packager: Udo Seidel
