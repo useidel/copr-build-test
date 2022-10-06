@@ -14,7 +14,7 @@ BuildRequires: coreutils, make, gcc
 %{summary}
 
 %prep
-%setup -n dummy_package-%{version}
+%setup -n dummy_package_src
 
 make hello_world
 
