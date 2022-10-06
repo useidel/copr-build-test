@@ -5,7 +5,7 @@ Release: 1%{?dist}
 License: GPL
 Packager: Udo Seidel
 Group: Development/Tools
-Source: %{name}.src.tar.gz
+Source: %{name}-%{version}.tar.gz
 BuildRequires: coreutils, make, gcc
 
 %global debug_package %{nil}
@@ -14,7 +14,7 @@ BuildRequires: coreutils, make, gcc
 %{summary}
 
 %prep
-%setup -n dummy_package_src
+%setup -n dummy_package-%{version}
 
 make hello_world
 
