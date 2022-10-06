@@ -6,7 +6,7 @@ License: GPL
 Packager: Udo Seidel
 Group: Development/Tools
 Source: %{name}.tar.gz
-BuildRequires: coreutils
+BuildRequires: coreutils, make, gcc
 
 %global debug_package %{nil}
 
