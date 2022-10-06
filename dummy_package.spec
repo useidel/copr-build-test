@@ -6,7 +6,7 @@ License: GPL
 Packager: Udo Seidel
 Group: Development/Tools
 Source: %{name}.tar.gz
-BuildRequires: coreutils, make, gcc
+##BuildRequires: coreutils, make, gcc
 
 %global debug_package %{nil}
 
@@ -17,14 +17,14 @@ BuildRequires: coreutils, make, gcc
 %setup -n dummy_package
 
 %build
-make hello_world
+###make hello_world
 
 %install
 mkdir -p "%{buildroot}/opt/dummy_package"
-cp hello_world "%{buildroot}/opt/dummy_package/"
+cp downtime.icinga2.sh "%{buildroot}/opt/dummy_package/"
 
 %files
-/opt/dummy_package/hello_world
+/opt/dummy_package/downtime.icinga2.sh
 
 %clean
 
