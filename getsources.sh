@@ -17,7 +17,5 @@ MYVER=`grep ^Version *.spec |awk '{print $2}'`
 
 # Now download the sources to the correspoding RPMBUILD directory
 cd /github/home/rpmbuild/SOURCES
-wget -nd https://github.com/useidel/copr-build-test/blob/main/dummy_package-0.0.1.tar.gz
-md5sum dummy_package-0.0.1.tar.gz
-
+wget -nd https://github.com/useidel/copr-build-test/raw/main/dummy_package-0.0.1.tar.gz
 
