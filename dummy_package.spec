@@ -31,6 +31,6 @@ cp hello_world "%{buildroot}/opt/dummy_package/"
 chmod 755 -R /opt/dummy_package
 
 %changelog
-* Wed Oct 05 2022 Udo Seidel <udoseidel@gmx.de>
+* Thu Oct 06 2022 Udo Seidel <udoseidel@gmx.de>
 - initial release
 
