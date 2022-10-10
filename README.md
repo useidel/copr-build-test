@@ -24,7 +24,7 @@ At this stage only two steps are missing: upload the changed context to Copr and
 
 For detailed information about these steps please refer to the corresponding documention on OBS and Github, respectively. Here are the links for this particular setup
 
-1. [Copr Project test](https://copr.fedorainfracloud.org/coprs/useidel/test/)
+1. [Copr Project dummy](https://copr.fedorainfracloud.org/coprs/useidel/dummy/)
 2. [Github Action Workflow](https://github.com/useidel/copr-build-test/blob/main/.github/workflows/rpmbuild_copr.yml)
 3. [Github Action Secret](https://github.com/useidel/copr-build-test/settings/secrets/actions)
 
