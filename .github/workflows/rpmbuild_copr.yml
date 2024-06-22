@@ -9,7 +9,7 @@ on:
   # and to ignore changes of the file README.md
   push:
     branches: [ "main" ]
-      paths-ignore:
+    paths-ignore:
       - 'README.md'
 
   # Allows you to run this workflow manually from the Actions tab
