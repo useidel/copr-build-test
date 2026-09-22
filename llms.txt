@@ -1,0 +1,27 @@
+# copr-build-test
+
+> A GitHub Actions example for triggering Copr builds.
+
+The repository demonstrates a Copr build workflow, including project setup, Actions workflow configuration, credentials stored as Actions secrets, and SRPM-based package builds.
+
+## Repository overview
+
+- [Source repository](https://github.com/useidel/copr-build-test): Canonical GitHub repository, including source files, issues, history, and repository metadata.
+- [README](https://raw.githubusercontent.com/useidel/copr-build-test/HEAD/README.md): Primary project documentation and usage notes.
+
+## Topics
+
+- GitHub Actions
+- Copr
+- RPM packaging
+- CI/CD
+
+## Additional resources
+
+- [Copr project example](https://copr.fedorainfracloud.org/coprs/useidel/dummy/)
+- [Workflow example](https://github.com/useidel/copr-build-test/blob/main/.github/workflows/rpmbuild_copr.yml)
+
+## Optional
+
+- [Repository activity](https://github.com/useidel/copr-build-test/commits): Commit history for implementation changes and maintenance context.
+- [Issues](https://github.com/useidel/copr-build-test/issues): Questions, bug reports, and project discussions when enabled.
